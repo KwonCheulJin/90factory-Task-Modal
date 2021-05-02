@@ -1,13 +1,12 @@
-# 90factory 4주차 과제
+# 90factory Modal Liberary
 
 > 간략 소개 한 문장
 
-- 프로그램 핵심 문법 2 과제
+- Modal Liberary 만들기 과제
 
 ## 핵심 기능 Key Feature
 
-- 계산기 프로그램
-- 주민등록번호 마스킹 프로그램
+- 버튼을 클릭하면 Modal창이 등장합니다.
 
 ## 사용 How To Use
 
