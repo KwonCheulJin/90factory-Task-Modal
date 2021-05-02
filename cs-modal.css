@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  z-index: 9999;
+}
+
+.modal-button button {
+  font-size: 38px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  padding: 32px 60px 48px;
+  background: #b388ff;
+  color: #fff;
+  border: 2px solid #666;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.modal-button button:hover {
+  cursor: pointer;
+  padding: 32px 60px 32px;
+  margin-top: 16px;
+  background: #b388ff;
+  color: #fff;
+}
+
+.modal-button button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 16px;
+  width: 100%;
+  border-top: 1px solid #666;
+  transition: 0.5s;
+  background-color: #805acb;
+}
+
+.modal-button button:hover::after {
+  transform: translateY(16px);
+}
+
+.modal-item h1 {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  font-size: 35px;
+}
+
+.modal-item p {
+  position: absolute;
+  padding-right: 32px;
+  text-align: left;
+  left: 32px;
+  font-size: 24px;
+}
+
+.modal-item code {
+  position: relative;
+  color: #8a2be2;
+  padding: 2px 4px;
+  font-size: 90% !important;
+  background-color: #f7f7f9;
+  border-radius: 2.5px;
+  font-family: Source Code Pro, Consolas, monaco, monospace !important;
+}
+
+.cs-modal-basic {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-modal-basic .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.cs-modal-basic .modal-content {
+  background-color: white;
+  padding: 100px 100px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  z-index: 4;
+  opacity: 0;
+  transform: scale(0.25);
+  transition: opacity 0.5s ease-in-out, transform 1000ms ease-in-out;
+}
+
+.cs-modal-basic button {
+  all: unset;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.cs-modal-basic h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 35px;
+}
+
+.cs-modal-basic .text {
+  position: absolute;
+  padding-right: 20px;
+  text-align: left;
+  left: 20px;
+  font-size: 24px;
+}
+
+.cs-modal-basic code {
+  position: relative;
+  right: 70px;
+  color: #8a2be2;
+  padding: 4px 8px;
+  font-size: 16px !important;
+  background-color: #f7f7f9;
+  border-radius: 2.5px;
+  font-family: Source Code Pro, Consolas, monaco, monospace !important;
+}
+
+.cs-modal-basic .text-one {
+  position: absolute;
+  top: 100px;
+  right: 25px;
+  padding-right: 20px;
+  font-size: 24px;
+}
+.cs-modal-basic .text-two {
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  padding-right: 20px;
+  font-size: 24px;
+}
+
+.show {
+  top: 0;
+}
+
+.show .modal-content {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
